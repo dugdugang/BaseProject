@@ -15,7 +15,12 @@ public class BaseAdapter<T> extends RecyclerView.Adapter<BaseViewHolder> {
     protected List<T> mDatas;
     protected Context mContext;
 
-    private RecycleItemDelagate delagate;
+    private DelagateManager<T> mDelagateManager;
+
+    public BaseAdapter(List<T> Datas, Context Context) {
+        this.mDatas = mDatas;
+        this.mContext = mContext;
+    }
 
     @Override
     public BaseViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {

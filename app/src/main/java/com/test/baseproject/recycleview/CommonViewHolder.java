@@ -68,4 +68,8 @@ public class CommonViewHolder extends RecyclerView.ViewHolder {
     public int getmPosition() {
         return mPosition;
     }
+
+    public View getItemView() {
+        return mConvertView;
+    }
 }

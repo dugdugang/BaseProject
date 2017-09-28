@@ -1,17 +1,15 @@
 package com.test.baseproject.recycleview;
 
-import android.view.View;
-
 /**
  * Author: duguang
  * Date 2017/9/27 0027.
  */
 
 public interface RecycleItemDelagate<T> {
-    int getItemType(T t);
+    int getItemLayoutId();
 
-    BaseViewHolder createViewHolder();
+    boolean isForViewType(T t, int position);
 
-    void bindData(T t, View itemView);
+    void convert(T t, CommonViewHolder holder, int position);
 
 }
